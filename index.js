@@ -12,12 +12,17 @@ function showData()
 
     var data = EMAIL + ":" +PASSWORD;
 
-    var element =document.createElement("h2");
+    var element =document.createElement("li");
+
+    element.className = "list-group-item";
 
     var dataNode =document.createTextNode(data);
 
     element.appendChild(dataNode);
 
     document.getElementById("showinputdata").appendChild(element);
+
+    localStorage.setItem("DATA : ",data);
+
 
 }
